@@ -1,0 +1,4 @@
+.DS_Store
+
+# production deployment file
+docker-compose.yml

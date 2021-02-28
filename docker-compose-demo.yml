@@ -1,0 +1,42 @@
+version: '3'
+services:
+  backend:
+    tty: true
+    stdin_open: true
+    build:
+      context: ./
+      dockerfile: dockerfiles/backend/backend.dockerfile
+    environment:
+      - DEBUG_FLAG=true
+      - STATIC_URL=/static/
+      - GUNICORN_PORT=2000
+      - GUNICORN_DEBUG_FLAG=true
+      - GUNICORN_RELOAD_FLAG=true
+      - SENTRY_DNS=""
+    volumes:
+      - ./backend:/backend/
+    ports:
+      - "2000:2000"
+    command: >
+      bash -c "
+      sleep 10
+      && pip install -r requirements.txt
+      && python3 manage.py makemigrations
+      && python3 manage.py migrate
+      && python3 manage.py collectstatic --noinput
+      && gunicorn --config=gunicorn_config.py backend.wsgi:application"
+
+  web:
+    build:
+      context: ./
+      dockerfile: dockerfiles/web/nginx.dockerfile
+    environment:
+      - SENTRY_DNS=""
+    ports:
+      - "80:80"
+    links:
+      - backend
+    depends_on:
+      - backend
+    volumes:
+      - ./backend:/backend/

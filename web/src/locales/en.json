@@ -1,0 +1,22 @@
+{
+    "Home": {
+        "AddRecord": {
+            "form": {
+                "price": {
+                    "error": "Please input correct price"
+                },
+                "notes": {
+                    "label": "Notes"
+                },
+                "submit_btn": "Submit"
+            }
+        },
+        "Summary": {
+            "header": "Summary",
+            "sub_header": {
+                "income": "Income",
+                "expense": "Expense"
+            }
+        }
+    }
+}
