@@ -12,15 +12,15 @@ Backend:
 ## Frontend (Vue.js)
 It shows how to add a new record on the bookkeeping for current month dynamically.
 
-![image](https://github.com/ZhuZean/bookkeeping/blob/main/preview/frontend/demo.gif)
+![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/frontend/demo.gif)
 
 ## Backend (Django)
 Django rest framework is used to make the Restful APIs.
 
 ### Endpoints list
-![image](https://github.com/ZhuZean/bookkeeping/blob/main/preview/backend/endpoint%20list.png)
+![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/backend/endpoint%20list.png)
 ### OpenAPI schema
-![image](https://github.com/ZhuZean/bookkeeping/blob/main/preview/backend/openapi.png)
+![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/backend/openapi.png)
 
 
 # How to run
