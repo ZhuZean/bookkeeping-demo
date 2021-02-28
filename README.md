@@ -1,6 +1,6 @@
 # Bookkeeping Project
 This is a demo project for bookkeeping application.
-It is based on the Vue.js, Django and Nginx.
+It is based on the Vue 3, Django and Nginx.
 
 
 # Preview
@@ -9,7 +9,7 @@ Frontend page: http://demo.zean.pro <br />
 Backend:
 - Endpoint list: http://api.zean.pro/
 - OpenAPI schema: http://api.zean.pro/openapi
-## Frontend (Vue.js)
+## Frontend (Vue 3)
 It shows how to add a new record on the bookkeeping for current month dynamically.
 
 ![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/frontend/demo.gif)
