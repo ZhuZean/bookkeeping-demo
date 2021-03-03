@@ -18,6 +18,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 from rest_framework import routers
 from rest_framework.schemas import get_schema_view
+from rest_framework_jwt.views import obtain_jwt_token
+
+
 from api.views import BillViewSet, BillSummaryViewSet, BillInfoViewSet
 
 
@@ -34,7 +37,8 @@ urlpatterns = [
         title="Bookkeeping Demo",
         description="API for bookkeeping project",
         version="1.0.0"
-    ), name='openapi-schema')
+    ), name='openapi-schema'),
+    path('login/', obtain_jwt_token)
 ]
 
 urlpatterns += staticfiles_urlpatterns()
