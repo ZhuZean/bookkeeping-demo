@@ -33,6 +33,7 @@ DEBUG = string_to_bool(os.getenv("DEBUG_FLAG", True))
 
 ALLOWED_HOSTS = ['127.0.0.1', 'api.zean.pro']
 
+AUTH_USER_MODEL = 'user.UserProfile'
 
 # Application definition
 INSTALLED_APPS = [
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
+    'user.apps.ApiConfig',
     'rest_framework',
     'gunicorn',
     'corsheaders',
