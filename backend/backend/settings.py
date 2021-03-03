@@ -33,6 +33,7 @@ DEBUG = string_to_bool(os.getenv("DEBUG_FLAG", True))
 
 ALLOWED_HOSTS = ['127.0.0.1', 'api.zean.pro']
 
+AUTH_USER_MODEL = 'user.UserProfile'
 
 # Application definition
 INSTALLED_APPS = [
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
+    'user.apps.ApiConfig',
     'rest_framework',
     'gunicorn',
     'corsheaders',
@@ -118,7 +120,12 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'anon': '1000/hour',
         'user': '1000/hour'
-    }
+    },
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
 }
 
 
