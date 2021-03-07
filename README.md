@@ -5,10 +5,20 @@ It is based on the Vue 3, Django and Nginx.
 
 # Preview
 ## Online demo
-Frontend page: http://demo.zean.pro <br />
+Prototype
+- [Figma link](https://www.figma.com/file/IYx7WBAG9HOsNzagNVBuBN/Personal-bookkeeping-web?node-id=0%3A1)
+
+Frontend:
+- Web page: http://demo.zean.pro
+
 Backend:
 - Endpoint list: http://api.zean.pro/
 - OpenAPI schema: http://api.zean.pro/openapi
+
+## Prototype (Figma)
+The prototype of the website (UI based on the bootstrap)
+![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/frontend/demo.gif)
+
 ## Frontend (Vue 3)
 It shows how to add a new record on the bookkeeping for current month dynamically.
 
@@ -23,10 +33,10 @@ Django rest framework is used to make the Restful APIs.
 ![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/backend/openapi.png)
 
 
-# How to run
+# Run in the local machine
 The whole project supports docker, so we can use `docker-compose` to run the project in the local machine.
 ```
-$ cd /root_path
+$ cd /bookkeeping-demo
 
 $ docker-compose -f docker-compose-demo.yml up -d --build
 ```
