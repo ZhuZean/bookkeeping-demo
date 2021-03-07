@@ -17,7 +17,7 @@ Backend:
 
 ## Prototype (Figma)
 The prototype of the website (UI based on the bootstrap)
-![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/frontend/demo.gif)
+![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/prototype/figma.png)
 
 ## Frontend (Vue 3)
 It shows how to add a new record on the bookkeeping for current month dynamically.
@@ -40,7 +40,9 @@ $ cd /bookkeeping-demo
 
 $ docker-compose -f docker-compose-demo.yml up -d --build
 ```
-Frontend page: http://127.0.0.1 <br />
+Frontend:
+- Webpage: http://127.0.0.1
+
 Backend:
 - Endpoint list: http://127.0.0.1:2000/
 - OpenAPI schema: http://127.0.0.1:2000/openapi
