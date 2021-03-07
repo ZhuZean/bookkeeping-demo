@@ -2,6 +2,8 @@
 This is a demo project for bookkeeping application.
 It is based on the Vue 3, Django and Nginx.
 
+# Workflow
+Managed by the GitHub [Kanban board](https://github.com/ZhuZean/bookkeeping-demo/projects/1)
 
 # Preview
 ## Online demo
