@@ -17,10 +17,6 @@ Backend:
 - Endpoint list: http://api.zean.pro/
 - OpenAPI schema: http://api.zean.pro/openapi
 
-## Prototype (Figma)
-The prototype of the website (UI based on the bootstrap)
-![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/prototype/figma.png)
-
 ## Frontend (Vue 3)
 It shows how to add a new record on the bookkeeping for current month dynamically.
 
