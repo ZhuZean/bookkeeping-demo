@@ -8,7 +8,7 @@ Managed by the GitHub [Kanban board](https://github.com/ZhuZean/bookkeeping-demo
 # Architecture [WIP]
 Currently the project is deployed with docker, but I plan to move it with Kubernetes.
 
-![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/frontend/demo.gif)
+![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/architecture/k8s.png)
 
 # Preview
 ## Online demo
