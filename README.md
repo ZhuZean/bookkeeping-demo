@@ -2,16 +2,16 @@
 This is a demo project for bookkeeping application.
 It is based on the Vue 3, Django and Nginx.
 
-# Workflow
+## Workflow
 Managed by the GitHub [Kanban board](https://github.com/ZhuZean/bookkeeping-demo/projects/1)
 
-# Architecture [WIP]
+## Architecture [WIP]
 Currently the project is deployed with docker, but I plan to move it with Kubernetes.
 
-![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/architecture/k8s.png)
+<img src="https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/architecture/k8s.png" width="70%" height="70%">
 
-# Preview
-## Online demo
+## Preview
+### Online demo
 Prototype
 - [Figma link](https://www.figma.com/file/IYx7WBAG9HOsNzagNVBuBN/Personal-bookkeeping-web?node-id=0%3A1)
 
@@ -22,21 +22,21 @@ Backend:
 - Endpoint list: http://api.zean.pro/
 - OpenAPI schema: http://api.zean.pro/openapi
 
-## Frontend (Vue 3)
+### Frontend (Vue 3)
 It shows how to add a new record on the bookkeeping for current month dynamically.
 
 ![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/frontend/demo.gif)
 
-## Backend (Django)
+### Backend (Django)
 Django rest framework is used to make the Restful APIs.
 
-### Endpoints list
+#### Endpoints list
 ![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/backend/endpoint%20list.png)
-### OpenAPI schema
+#### OpenAPI schema
 ![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/backend/openapi.png)
 
 
-# Run in the local machine
+## Run in the local machine
 The whole project supports docker, so we can use `docker-compose` to run the project in the local machine.
 ```
 $ cd /bookkeeping-demo
