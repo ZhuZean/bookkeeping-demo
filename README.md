@@ -5,6 +5,11 @@ It is based on the Vue 3, Django and Nginx.
 # Workflow
 Managed by the GitHub [Kanban board](https://github.com/ZhuZean/bookkeeping-demo/projects/1)
 
+# Architecture [WIP]
+Currently the project is deployed with docker, but I plan to move it with Kubernetes.
+
+![image](https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/architecture/k8s.png)
+
 # Preview
 ## Online demo
 Prototype
