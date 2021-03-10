@@ -16,19 +16,26 @@ spec:
     spec:
       containers:
       - name: api
-        image: 
-        imagePullPolicy: Always
+        image: bill-image
+        imagePullPolicy: Never
         resources:
           requests:
             cpu: 100m
             memory: 100Mi
+        command: ["/bin/sh"]
+        args: ["-c", "pwd && ls && sleep 10
+                && pip install -r requirements.txt
+                && python3 manage.py makemigrations
+                && python3 manage.py migrate
+                && python3 manage.py collectstatic --noinput
+                && gunicorn --config=gunicorn_config.py backend.wsgi:application"]
         env:
         - name: DEBUG_FLAG
           value: 'true'
         - name: STATIC_URL
           value: /static/
         - name: GUNICORN_PORT
-          value: 2000
+          value: '80'
         - name: GUNICORN_DEBUG_FLAG
           value: 'true'
         - name: GUNICORN_RELOAD_FLAG
