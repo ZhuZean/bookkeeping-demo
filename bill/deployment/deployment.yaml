@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  labels:
+    app.kubernetes.io/name: bill
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: bill
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: bill
+    spec:
+      containers:
+      - name: api
+        image: 
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+        - name: DEBUG_FLAG
+          value: 'true'
+        - name: STATIC_URL
+          value: /static/
+        - name: GUNICORN_PORT
+          value: 2000
+        - name: GUNICORN_DEBUG_FLAG
+          value: 'true'
+        - name: GUNICORN_RELOAD_FLAG
+          value: 'true'
+        - name: SENTRY_DNS
+          value: 'http://test.com'
+        ports:
+        - containerPort: 80

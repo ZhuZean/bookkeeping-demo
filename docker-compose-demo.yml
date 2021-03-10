@@ -1,11 +1,11 @@
 version: '3'
 services:
-  backend:
+  bill:
     tty: true
     stdin_open: true
     build:
       context: ./
-      dockerfile: dockerfiles/backend/backend.dockerfile
+      dockerfile: dockerfiles/bill/bill.dockerfile
     environment:
       - DEBUG_FLAG=true
       - STATIC_URL=/static/
@@ -14,7 +14,7 @@ services:
       - GUNICORN_RELOAD_FLAG=true
       - SENTRY_DNS=""
     volumes:
-      - ./backend:/backend/
+      - ./bill:/bill/
     ports:
       - "2000:2000"
     command: >
@@ -35,8 +35,8 @@ services:
     ports:
       - "80:80"
     links:
-      - backend
+      - bill
     depends_on:
-      - backend
+      - bill
     volumes:
-      - ./backend:/backend/
+      - ./bill:/bill/

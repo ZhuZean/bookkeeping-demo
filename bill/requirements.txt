@@ -12,3 +12,4 @@ sentry-sdk==0.20.3
 sqlparse==0.4.1
 uritemplate==3.0.1
 urllib3==1.26.3
+djangorestframework-jwt==1.11.0
