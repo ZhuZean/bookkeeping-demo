@@ -31,7 +31,7 @@ SECRET_KEY = '=$p2gg+gcyu8v4bbs(475q@ve16tn=e==f(mnps$543-!y)#1m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = string_to_bool(os.getenv("DEBUG_FLAG", True))
 
-ALLOWED_HOSTS = ['127.0.0.1', 'api.zean.pro']
+ALLOWED_HOSTS = ['127.0.0.1', 'api.zean.pro', 'api.minikube.zean.pro']
 
 AUTH_USER_MODEL = 'user.UserProfile'
 
