@@ -2,7 +2,7 @@
 echo
 script_dir=$(cd $(dirname $0);pwd)
 
-microservice_name="web"
+microservice_name="gateway"
 DEV_CLUSTER_NAME=development-cluster
 
 # Automatic k8s namespace creation
@@ -15,6 +15,7 @@ else
     kubectl create namespace ${k8s_namespace}
 fi
 
+kubectl label namespace ${k8s_namespace} istio-injection=enabled
 
 echo "Done."
 echo

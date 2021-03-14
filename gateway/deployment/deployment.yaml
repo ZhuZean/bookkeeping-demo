@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web
+  name: nginx
   labels:
-    app.kubernetes.io/name: web
+    app.kubernetes.io/name: gateway
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: web
+      app.kubernetes.io/name: gateway
   replicas: 1
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: web
+        app.kubernetes.io/name: gateway
     spec:
       containers:
-      - name: demo
-        image: web-image
+      - name: nginx
+        image: gateway-image
         imagePullPolicy: Never
         resources:
           requests:
@@ -25,4 +25,6 @@ spec:
         command: ["/bin/sh"]
         args: ["-c", "exec nginx -g 'daemon off;'"]
         ports:
-        - containerPort: 80
+        - name: http
+          containerPort: 80
+          protocol: TCP
