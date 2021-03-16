@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: example-ingress
+  name: bill-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
@@ -9,20 +9,10 @@ spec:
     - host: api.minikube.zean.pro
       http:
         paths:
-          - path: /
+          - path: /bill/(.*)
             pathType: Prefix
             backend:
               service:
-                name: gateway
-                port:
-                  number: 80
-    - host: demo.minikube.zean.pro
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: gateway
+                name: api
                 port:
                   number: 80
