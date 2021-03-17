@@ -1,12 +1,16 @@
-# Bookkeeping Project
-Deployment with kubernetes, use minikube in the development environment.
+# Kubernetes deployment
+Use minikube in the development environment and microk8s (WIP) in the server.
+
+## Architecture
+
+<img src="https://github.com/ZhuZean/bookkeeping-demo/blob/main/preview/architecture/k8s.png" width="70%" height="70%">
 
 ## Deployment in Minikube
 #### Install minikube
 Install minikube by this [documentation](https://minikube.sigs.k8s.io/docs/start/)
 
 #### Enable ingress controller
-`minikube addons enable ingress`
+`$ minikube addons enable ingress`
 
 #### Enable istio
 Install Istio by this [documentation](https://istio.io/latest/docs/setup/getting-started/#download)
