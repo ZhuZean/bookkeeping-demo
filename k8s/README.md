@@ -1,5 +1,5 @@
 # Bookkeeping Project
-Deployment with minikube, development environment in the local machine. 
+Deployment with kubernetes, use minikube in the development environment.
 
 ## Deployment in Minikube
 #### Install minikube
