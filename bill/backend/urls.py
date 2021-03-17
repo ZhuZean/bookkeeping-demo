@@ -35,7 +35,7 @@ router.register(r'register', UserRegisterViewSet, basename='userRegister')
 
 urlpatterns = [
     path('xadmin/', admin.site.urls),
-    path('', include(router.urls)),
+    path('', include((router.urls, 'api'), namespace='api')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('openapi', get_schema_view(
         title="Bookkeeping Demo",
