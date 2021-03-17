@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: demo
-        image: web-image
-        imagePullPolicy: Never
+        image: zhuzean/bookkeeping:web-svc
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: 100m
