@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: web-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  - hosts:
+      - demo.k8s.zean.pro
+    secretName: demo-tls
+  rules:
+    - host: demo.k8s.zean.pro
+      http:
+        paths:
+          - path: /(.*)
+            pathType: Prefix
+            backend:
+              serviceName: web
+              servicePort: 80
