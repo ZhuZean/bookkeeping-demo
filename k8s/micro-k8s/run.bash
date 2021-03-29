@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo "Start deployment in minikube"
+echo "Start deployment in microk8s"
 micro_k8s_script_dir=$(cd $(dirname $0);pwd)
 k8s_script_dir=$(cd $(dirname $0)/..;pwd)
 
