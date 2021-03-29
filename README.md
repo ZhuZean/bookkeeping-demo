@@ -14,11 +14,11 @@ Prototype
 - [Figma link](https://www.figma.com/file/IYx7WBAG9HOsNzagNVBuBN/Personal-bookkeeping-web?node-id=0%3A1)
 
 Frontend:
-- Web page: http://demo.zean.pro
+- Web page: http://demo.k8s.zean.pro
 
 Backend:
-- Endpoint list: http://api.zean.pro/
-- OpenAPI schema: http://api.zean.pro/openapi
+- Endpoint list: http://api.k8s.zean.pro/bill/
+- OpenAPI schema: http://api.k8s/zean.pro/bill/openapi
 
 ### Frontend (Vue 3)
 It shows how to add a new record on the bookkeeping for current month dynamically.
