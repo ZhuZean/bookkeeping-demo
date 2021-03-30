@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '=$p2gg+gcyu8v4bbs(475q@ve16tn=e==f(mnps$543-!y)#1m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = string_to_bool(os.getenv("DEBUG_FLAG", True))
+DEBUG = string_to_bool(os.getenv("DEBUG_FLAG", False))
 
-ALLOWED_HOSTS = ['127.0.0.1', 'api.zean.pro', 'api.minikube.zean.pro', 'api.k8s.zean.pro']
+ALLOWED_HOSTS = ['127.0.0.1', 'api.zean.pro', 'api.minikube.zean.pro', 'api.k8s.zean.pro', 'api.bill-svc.svc.cluster.local']
 
 AUTH_USER_MODEL = 'user.UserProfile'
 

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    app: web
+spec:
+  selector:
+    matchLabels:
+      app: web
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: demo
+        image: zhuzean/bookkeeping:web-svc
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        command: ["/bin/sh"]
+        args: ["-c", "exec nginx -g 'daemon off;'"]
+        ports:
+        - containerPort: 80
