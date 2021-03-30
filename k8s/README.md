@@ -1,5 +1,5 @@
 # Kubernetes deployment
-Use minikube in the development environment and microk8s (WIP) in the server.
+Use minikube in the development environment and microk8s in the server.
 
 ## Architecture
 
