@@ -161,3 +161,6 @@ USE_TZ = True
 
 STATIC_URL = 'https://storage.googleapis.com/zean-demo/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+USE_X_FORWARDED_HOST = True
+FORCE_SCRIPT_NAME = "/bill/"
