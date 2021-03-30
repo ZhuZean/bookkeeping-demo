@@ -42,5 +42,21 @@ spec:
           value: 'true'
         - name: SENTRY_DNS
           value: 'http://test.com'
+        - name: DATABASE_HOST
+          value: 'sh-cdb-qez3caps.sql.tencentcdb.com'
+        - name: DATABASE_PORT
+          value: '60187'
+        - name: DATABASE_NAME
+          value: 'zean_demo'
+        - name: DATABASE_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: user
+        - name: DATABASE_PASS
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: pass
         ports:
         - containerPort: 80
