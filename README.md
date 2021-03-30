@@ -35,15 +35,4 @@ Django rest framework is used to make the Restful APIs.
 
 
 ## Run in the local machine
-The whole project supports docker, so we can use `docker-compose` to run the project in the local machine.
-```
-$ cd /bookkeeping-demo
-
-$ docker-compose -f docker-compose-demo.yml up -d --build
-```
-Frontend:
-- Webpage: http://127.0.0.1
-
-Backend:
-- Endpoint list: http://127.0.0.1:2000/
-- OpenAPI schema: http://127.0.0.1:2000/openapi
+Check this [page](https://github.com/ZhuZean/bookkeeping-demo/tree/main/k8s) about how to deploy it with minikube in the local machine
