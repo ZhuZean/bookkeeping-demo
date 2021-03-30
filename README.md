@@ -18,7 +18,7 @@ Frontend:
 
 Backend:
 - Endpoint list: http://api.k8s.zean.pro/bill/
-- OpenAPI schema: http://api.k8s/zean.pro/bill/openapi
+- OpenAPI schema: http://api.k8s.zean.pro/bill/openapi
 
 ### Frontend (Vue 3)
 It shows how to add a new record on the bookkeeping for current month dynamically.
