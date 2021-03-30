@@ -90,6 +90,7 @@ if os.getenv('DATABASE_HOST'):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
+            'CONN_MAX_AGE': 3600,
             'NAME': os.getenv('DATABASE_NAME'),
             'USER': os.getenv('DATABASE_USER'),
             'PASSWORD': os.getenv('DATABASE_PASS'),
