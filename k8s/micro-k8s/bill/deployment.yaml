@@ -43,9 +43,9 @@ spec:
         - name: SENTRY_DNS
           value: 'http://test.com'
         - name: DATABASE_HOST
-          value: '34.84.113.165'
+          value: 'sh-cdb-qez3caps.sql.tencentcdb.com'
         - name: DATABASE_PORT
-          value: '3306'
+          value: '60187'
         - name: DATABASE_NAME
           value: 'zean_demo'
         - name: DATABASE_USER
