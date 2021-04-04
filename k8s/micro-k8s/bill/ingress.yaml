@@ -11,7 +11,7 @@ spec:
   - host: api.k8s.zean.pro
     http:
       paths:
-      - path: /bill/(.*)
+      - path: /(.*)
         backend:
           serviceName: api
           servicePort: 80

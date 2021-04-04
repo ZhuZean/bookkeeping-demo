@@ -9,7 +9,7 @@ spec:
     - host: api.minikube.zean.pro
       http:
         paths:
-          - path: /bill/(.*)
+          - path: /(.*)
             pathType: Prefix
             backend:
               service:

@@ -5,7 +5,7 @@ const BASE_URL: string = process.env.VUE_APP_API_DOMAIN
 
 async function getOpenApi() {
     let openApi = ''
-    await axios.get(`${BASE_URL}/openapi?format=openapi-json`)
+    await axios.get(`${BASE_URL}/bill/openapi.json`)
     .then(function (response) {
         openApi = JSON.stringify(response.data)
         localStorage.setItem(`bookkeeping-openapi`, openApi)
