@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+aresponses = "*"
+freezegun = "*"
+pyjwt = "*"
+
+[packages]
+argparse = "*"
+alembic = "*"
+sqlalchemy = "*"
+fastapi = "*"
+uvicorn = "*"
+pydantic = "*"
+requests = "*"
+psycopg2-binary = "*"
+
+
+[requires]
+python_version = "3.8"
