@@ -5,11 +5,11 @@
         <div class="col">
           <select class="form-control" v-model="payment">
             <option
-              v-for="(paymentName, index) in billInfo.payment"
+              v-for="(paymentObj, index) in billInfo.payment"
               :key="index"
-              v-bind:value="paymentName"
+              v-bind:value="paymentObj.id"
             >
-              {{ paymentName }}
+              {{ paymentObj.name }}
             </option>
           </select>
         </div>
@@ -27,11 +27,11 @@
         <div class="col">
           <select class="form-control" v-model="usage">
             <option
-              v-for="(usageName, index) in billInfo.usage"
+              v-for="(usageObj, index) in billInfo.usage"
               :key="index"
-              v-bind:value="usageName"
+              v-bind:value="usageObj.id"
             >
-              {{ usageName }}
+              {{ usageObj.name }}
             </option>
           </select>
         </div>
@@ -40,11 +40,11 @@
         <div class="col-4">
           <select class="form-control" v-model="currency">
             <option
-              v-for="(currencyName, index) in billInfo.currency"
+              v-for="(currencyObj, index) in billInfo.currency"
               :key="index"
-              v-bind:value="currencyName"
+              v-bind:value="currencyObj.id"
             >
-              {{ currencyName }}
+              {{ currencyObj.name }}
             </option>
           </select>
         </div>

@@ -11,7 +11,7 @@
             <small class="form-text text-muted">{{ bill.note }}</small>
           </div>
           <div class="col-md-6 text-right">
-            <h5 class="text-danger" v-if="bill.bill_type == 'EX'">
+            <h5 class="text-danger" v-if="bill.bill_type == 'expense'">
               - {{ bill.price }}
             </h5>
             <h5 class="text-success" v-else>+ {{ bill.price }}</h5>

@@ -29,9 +29,9 @@ type Payment = {
 }
 
 type BillInfo = {
-    'payment': string[],
-    'usage': string[],
-    'currency': string[],
+    'payment': any[],
+    'usage': any[],
+    'currency': any[],
     'bill_type': string[]
 }
 
@@ -49,23 +49,12 @@ function isEmptyObject(obj: any) {
 }
 
 function getBillFormRequestData(billForm: BillForm) {
-    let billType = ''
-    if (billForm.billType == 'Income') {
-        billType = 'IN'
-    } else {
-        billType = 'EX'
-    }
+    console.log(billForm)
     return {
-        "payment": {
-          "name": billForm.payment
-        },
-        "bill_type": billType,
-        "usage": {
-          "name": billForm.usage
-        },
-        "currency": {
-          "name": billForm.currency
-        },
+        "payment_id": billForm.payment,
+        "bill_type": billForm.billType,
+        "usage_id": billForm.usage,
+        "currency_id": billForm.currency,
         "price": billForm.price,
         "note": billForm.note
       }
@@ -104,7 +93,7 @@ const actions = {
     },
     async getBills(context: any, payload: any) {
         const resp = await billService.getBills(payload)
-        context.commit('setBills', resp.results)
+        context.commit('setBills', resp.items)
         context.commit('setPagination', resp.pagination)
     },
     async getBillSummary(context: any) {
@@ -177,10 +166,10 @@ const mutations = {
         state.billInfo.usage = billInfo.usage
         state.billInfo.currency = billInfo.currency
         // set bill form default value
-        state.addBillForm.payment = billInfo.payment[0]
+        state.addBillForm.payment = billInfo.payment[0].id
         state.addBillForm.billType = billInfo.bill_type[1]
-        state.addBillForm.usage = billInfo.usage[0]
-        state.addBillForm.currency = billInfo.currency[0]
+        state.addBillForm.usage = billInfo.usage[0].id
+        state.addBillForm.currency = billInfo.currency[0].id
     },
     updateAddBillFormField(state: any, field: any) {
         updateField(state.addBillForm, field);
@@ -198,9 +187,10 @@ function initialState() {
         billId: 0,
         bills: [],
         pagination: {
-            count: 0,
-            next: null,
-            previous: null,
+            total_number_of_items: 0,
+            current_page: 1,
+            next_page: null,
+            previous_page: null,
             total_pages: 0
         },
         summary: {
