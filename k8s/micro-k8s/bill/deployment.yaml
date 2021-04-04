@@ -25,7 +25,7 @@ spec:
         command: ["/bin/sh"]
         args: ["-c", "sleep 10
                 && alembic upgrade head
-                && uvicorn main:app"]
+                && uvicorn main:app --host 0.0.0.0 --port 8000"]
         env:
         - name: ENVIRONMENT
           value: 'production'
