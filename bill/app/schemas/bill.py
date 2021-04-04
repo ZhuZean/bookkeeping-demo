@@ -1,5 +1,6 @@
 from typing import List
 from decimal import Decimal
+from uuid import UUID
 
 from pydantic import BaseModel
 
@@ -15,6 +16,7 @@ class CreateBillRequest(BaseBill):
 
 
 class CreateBillResponse(BaseBill):
+    id: UUID
     bill_type: str
     note: str
     price: Decimal
