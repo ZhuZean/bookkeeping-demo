@@ -30,24 +30,14 @@ spec:
                 && python3 manage.py collectstatic --noinput
                 && gunicorn --config=gunicorn_config.py backend.wsgi:application"]
         env:
-        - name: DEBUG_FLAG
-          value: 'true'
-        - name: STATIC_URL
-          value: /static/
-        - name: GUNICORN_PORT
-          value: '80'
-        - name: GUNICORN_DEBUG_FLAG
-          value: 'true'
-        - name: GUNICORN_RELOAD_FLAG
-          value: 'true'
-        - name: SENTRY_DNS
-          value: 'http://test.com'
+        - name: ENVIRONMENT
+          value: 'production'
         - name: DATABASE_HOST
-          value: 'sh-cdb-qez3caps.sql.tencentcdb.com'
+          value: '34.84.243.128'
         - name: DATABASE_PORT
-          value: '60187'
+          value: '5432'
         - name: DATABASE_NAME
-          value: 'zean_demo'
+          value: 'demo_microk8s'
         - name: DATABASE_USER
           valueFrom:
             secretKeyRef:
