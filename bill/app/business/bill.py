@@ -40,19 +40,19 @@ class BillBusiness():
         currency_query = db.query(CurrencyOrm)
         all_currency = currency_query.order_by(CurrencyOrm.updated_at).all()
 
-        return [currency.name for currency in all_currency]
+        return [currency for currency in all_currency]
 
     def _get_all_payment_name(self, db: Session) -> list:
         payment_query = db.query(PaymentOrm)
         all_payment = payment_query.order_by(PaymentOrm.updated_at).all()
 
-        return [payment.name for payment in all_payment]
+        return [payment for payment in all_payment]
 
     def _get_all_usage_name(self, db: Session) -> list:
         usage_query = db.query(UsageOrm)
         all_usage = usage_query.order_by(UsageOrm.updated_at).all()
 
-        return [usage.name for usage in all_usage]
+        return [usage for usage in all_usage]
 
     def _get_all_bill_type(self) -> list:
         return [bill_type.value for bill_type in BillTypeEnum]

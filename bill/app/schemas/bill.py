@@ -31,9 +31,9 @@ class ListBillResponse(PaginationResponse):
 
 
 class BillFormInfoResponse(BaseModel):
-    payment: List[str]
-    usage: List[str]
-    currency: List[str]
+    payment: List[BasePayment]
+    usage: List[BaseUsage]
+    currency: List[BaseCurrency]
     bill_type: List[str]
 
     class Config:

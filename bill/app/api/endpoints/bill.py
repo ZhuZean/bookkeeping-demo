@@ -39,7 +39,7 @@ def create(
 @router.get("", response_model=ListBillResponse)
 def list_bills(
     page: int = Query(1),
-    limit: int = Query(20),
+    limit: int = Query(5),
     db=Depends(deps.get_db_session),
     bill_business=Depends(deps.get_bill_business)
 ) -> Any:
