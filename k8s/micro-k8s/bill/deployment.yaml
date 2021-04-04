@@ -59,4 +59,4 @@ spec:
               name: db-credentials
               key: pass
         ports:
-        - containerPort: 80
+        - containerPort: 8000
