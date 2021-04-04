@@ -24,11 +24,8 @@ spec:
             memory: 100Mi
         command: ["/bin/sh"]
         args: ["-c", "sleep 10
-                && pip install -r requirements.txt
-                && python3 manage.py makemigrations
-                && python3 manage.py migrate
-                && python3 manage.py collectstatic --noinput
-                && gunicorn --config=gunicorn_config.py backend.wsgi:application"]
+                && alembic upgrade head
+                && uvicorn main:app"]
         env:
         - name: ENVIRONMENT
           value: 'production'
