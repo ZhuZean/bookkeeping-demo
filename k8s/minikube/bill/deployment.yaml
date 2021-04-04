@@ -24,23 +24,26 @@ spec:
             memory: 100Mi
         command: ["/bin/sh"]
         args: ["-c", "sleep 10
-                && pip install -r requirements.txt
-                && python3 manage.py makemigrations
-                && python3 manage.py migrate
-                && python3 manage.py collectstatic --noinput
-                && gunicorn --config=gunicorn_config.py backend.wsgi:application"]
+                && alembic upgrade head
+                && uvicorn main:app"]
         env:
-        - name: DEBUG_FLAG
-          value: 'true'
-        - name: STATIC_URL
-          value: /static/
-        - name: GUNICORN_PORT
-          value: '80'
-        - name: GUNICORN_DEBUG_FLAG
-          value: 'true'
-        - name: GUNICORN_RELOAD_FLAG
-          value: 'true'
-        - name: SENTRY_DNS
-          value: 'http://test.com'
+        - name: ENVIRONMENT
+          value: 'development'
+        - name: DATABASE_HOST
+          value: '34.84.243.128'
+        - name: DATABASE_PORT
+          value: '5432'
+        - name: DATABASE_NAME
+          value: 'demo_minikube'
+        - name: DATABASE_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: user
+        - name: DATABASE_PASS
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: pass
         ports:
-        - containerPort: 80
+        - containerPort: 8000
