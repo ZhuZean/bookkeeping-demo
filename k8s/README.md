@@ -1,5 +1,6 @@
 # Kubernetes deployment
 Use minikube in the development environment and microk8s in the server.
+
 I shared how to deploy microk8s on GCP in this [article](https://zhuzean.medium.com/microk8s-on-gcp-vm-730aa49d277f)
 
 ## Architecture
