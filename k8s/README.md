@@ -1,5 +1,6 @@
 # Kubernetes deployment
 Use minikube in the development environment and microk8s in the server.
+I shared how to deploy microk8s on GCP in this [article](https://zhuzean.medium.com/microk8s-on-gcp-vm-730aa49d277f)
 
 ## Architecture
 
@@ -30,7 +31,7 @@ Get ingress information:
 
 ```
 NAME           CLASS    HOSTS                   ADDRESS        PORTS   AGE
-bill-ingress   <none>   api.minikube.zean.pro   172.16.247.6   80      15m 
+bill-ingress   <none>   api.minikube.zean.pro   172.16.247.6   80      15m
 ```
 
 2. Setup local DNS
